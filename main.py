@@ -234,5 +234,5 @@ for images, labels in test_ds.take(1):
 
     plt.tight_layout()
     plt.savefig('example.png') 
-plt.close()
+    plt.close()
 break
