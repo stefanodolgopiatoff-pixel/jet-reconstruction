@@ -6,7 +6,7 @@
 
 **EXECUTION**:
 Open a computer terminal and use the following commands with Docker opened in background: 
-1) git clone 
+1) git clone https://github.com/stefanodolgopiatoff-pixel/jet-reconstruction.git
 2) cd jet-reconstruction
 3) docker build -t image_name_of_your_choice .
 4) docker run --rm -v "%cd%:/app" image_name_of_your_choice
