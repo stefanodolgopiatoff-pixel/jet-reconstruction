@@ -6,8 +6,8 @@
 
 **EXECUTION**:
 Open the terminal where the GitHub repository has been downloaded and use the following commands with docker opened in background: 
-1) docker build -t <image name of your choice>
-2) docker run --rm <image name of your choice>
+1) docker build -t 'image name of your choice'
+2) docker run --rm 'image name of your choice'
 
 **PROJECT DESCRIPTION**: 
 This project uses a deep learning solution for classifying images of LHC simulated proton collisions. The primary goal is to categorize these images into three distinct jet signal types: QCD, TTbar, and WJets. 
