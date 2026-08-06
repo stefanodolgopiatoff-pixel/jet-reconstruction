@@ -5,9 +5,13 @@
 - README.md #project documentation
 
 **EXECUTION**:
-Open the terminal where the GitHub repository has been downloaded and use the following commands with Docker opened in background: 
-1) docker build -t image_name_of_your_choice .
-2) docker run --rm image_name_of_your_choice
+Open a computer terminal and use the following commands with Docker opened in background: 
+1) git clone 
+2) cd jet-reconstruction
+3) docker build -t image_name_of_your_choice .
+4) docker run --rm -v "%cd%:/app" image_name_of_your_choice
+
+In the directory jet-reconstruction cloned from GitHub there will be after the execution also the charts obtained (accuracy/loss, confusion matrix and an example).
 
 **PROJECT DESCRIPTION**: 
 This project uses a deep learning solution for classifying images of LHC simulated proton collisions. The primary goal is to categorize these images into three distinct jet signal types: QCD, TTbar, and WJets. 
@@ -21,4 +25,4 @@ Finally, the project includes a qualitative assessment by displaying predictions
 After training, the model achieved an overall test accuracy of around 60-65%. Looking closer at individual classes, the model performed particularly well at identifying TTbar collisions, achieving accuracy rates around 70-75%. However, it had more difficulty distinguishing between the QCD and WJets categories, where performance typically dropped to the 50-60% range.
 The main classification issue comes from the visual similarity between QCD and WJets events in low-resolution images, leading the network to frequently confuse one for the other. Besides that, the training graphs show that the model learns consistently over 15 epochs, with the learning rate scheduler effectively helping stabilization during training.
 
-**TO NOTE**: I used T4 GPU on Google Colab to optimize the training speed, with CPU the time needed increases. To visualize all the plots (also the confusion matrix and the examples), is recommended to launch it in google colab since from the terminal only the numerical results are showed.
+**TO NOTE**: I used T4 GPU on Google Colab to optimize the training speed, with CPU the time needed increases.
