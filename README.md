@@ -5,7 +5,7 @@
 - README.md #project documentation
 
 **EXECUTION**:
-Open the terminal where the GitHub repository has been downloaded and use the following commands with docker opened in background: 
+Open the terminal where the GitHub repository has been downloaded and use the following commands with Docker opened in background: 
 1) docker build -t image_name_of_your_choice .
 2) docker run --rm image_name_of_your_choice
 
