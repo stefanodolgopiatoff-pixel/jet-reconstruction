@@ -17,10 +17,8 @@ Training is performed over 15 epochs, incorporating a ReduceLROnPlateau callback
 Then the model's performance is evaluated through visualization of training and test accuracy/loss curves, generation of a comprehensive classification report detailing precision, recall, and F1-score for each class, and a confusion matrix. 
 Finally, the project includes a qualitative assessment by displaying predictions on 5 sample test images, highlighting correct and incorrect classifications.
 
-
-
 **TRAINING PERFORMANCES**:
 After training, the model achieved an overall test accuracy of around 60-65%. Looking closer at individual classes, the model performed particularly well at identifying TTbar collisions, achieving accuracy rates around 70-75%. However, it had more difficulty distinguishing between the QCD and WJets categories, where performance typically dropped to the 50-60% range.
 The main classification issue comes from the visual similarity between QCD and WJets events in low-resolution images, leading the network to frequently confuse one for the other. Besides that, the training graphs show that the model learns consistently over 15 epochs, with the learning rate scheduler effectively helping stabilization during training.
 
-**TO NOTE**: I used GPU on Google Colab to optimize the training speed, with CPU the time is slower
+**TO NOTE**: I used T4 GPU on Google Colab to optimize the training speed, with CPU the time needed increases.
