@@ -126,7 +126,9 @@ history = model.fit(
 )
 
 """Plotting training history curves"""
+import matplotlib 
 
+matplotlib.use('Agg') #to let docker riproduce charts
 import matplotlib.pyplot as plt
 
 #Extract accuracy and loss history
@@ -157,7 +159,8 @@ plt.xlabel("Epochs")
 plt.ylabel("Loss")
 
 plt.tight_layout()
-plt.show()
+plt.savefig('chart_accuracy.png') 
+plt.close()                         
 
 """Confusion matrix"""
 
@@ -201,7 +204,8 @@ plt.xlabel("Predicted Label")
 plt.ylabel("True Label")
 plt.title("Confusion Matrix")
 plt.tight_layout()
-plt.show()
+plt.savefig('confusion_matrix.png') 
+plt.close()
 
 """Prediction and display of 5 jet images"""
 
@@ -229,5 +233,6 @@ for images, labels in test_ds.take(1):
         plt.axis("off")
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig('example.png') 
+plt.close()
     break
