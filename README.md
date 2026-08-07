@@ -10,6 +10,7 @@ Open a computer terminal and use the following commands with Docker opened in ba
 2) cd jet-reconstruction
 3) docker build -t image_name_of_your_choice .
 4) docker run --rm -v "%cd%:/app" image_name_of_your_choice
+
 In the directory jet-reconstruction cloned from GitHub there will be after the execution also the charts obtained (accuracy/loss, confusion matrix and 5 prediction examples).
 
 **PROJECT DESCRIPTION**
